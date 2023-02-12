@@ -1,0 +1,5 @@
+<h1>ToDo APP</h1>
+<div class="tasks-list">
+    <app-form (onAdd)="addTask()" (onAddText)="addTaskText($event)"></app-form>
+    <app-task *ngFor="let task of tasksList; let i = index" [texto]="task" (onEliminar)="eliminarTask(i)"></app-task>
+</div>
